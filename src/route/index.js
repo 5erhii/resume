@@ -76,7 +76,6 @@ router.get('/summary', function (req, res) {
   })
 })
 
-
 // ================================================================
 
 //              ↙ тут вводимо шлях (PATH) до сторінки
@@ -240,15 +239,16 @@ router.get('/work', function (req, res) {
   })
 })
 
-
 // ================================================================
 
+// router.get Створює нам один ентпоїнт
+
 //           ↙ тут вводимо шлях (PATH) до сторінки
-router.get('/shopproduct', function (req, res) {
+router.get('/shophome', function (req, res) {
   // res.render генерує нам HTML сторінку
 
   //            ↙ cюди вводимо назву файлу з сontainer
-  res.render('shopproduct', {
+  res.render('shophome', {
     layout: 'shop',
     navigation: {
       links: [
@@ -267,60 +267,95 @@ router.get('/shopproduct', function (req, res) {
       ],
     },
 
-    breadcrumb: [
-      { name: 'Home', url: 'https://github.com/' },
-      { name: 'PC', url: 'https://www.google.com/' },
-      { name: 'Windows', url: 'https://github.com/' },
-      { name: 'Product PC #3123', url: null },
-    ],
-
-    productData: {
-      img: 'https://picsum.photos/400/200',
-
-      info: {
-        title: 'Product PC Asus 331 BC 671',
-        about:
-          "Some quick example text to build on the card title and make up the bulk of the card's content.",
-        price: '1000$',
-
-        category: [
-          { name: 'HOT', isHot: true },
-          { name: 'New', isNew: true },
-          { name: 'Bonus', isBonus: true },
-        ],
-      },
-
-      actionList: [
-        { name: 'Buy', isWarning: true },
-        { name: 'Add to cart', isError: true },
-        { name: 'Like', isSuccess: true },
-        { name: 'Share', isGood: true },
+    newsBlock: {
+      title: 'Latest News',
+      cards: [
+        {
+          title: 'COVID-19 Vaccinations Begin in Europe',
+          description:
+            'As the world continues to grapple with the ongoing COVID-19 pandemic, Europe begins its vaccination rollout, with healthcare workers and the elderly among the first to receive the vaccine.',
+          isTop: false,
+          isNew: false,
+        },
+        {
+          title: 'Tesla Stock Surges After Record Sales',
+          description:
+            "Tesla's stock price jumps 10% following the company's announcement of record sales in the last quarter, thanks in part to strong demand for its electric vehicles.",
+          isTop: true,
+          isNew: true,
+        },
+        {
+          title:
+            'New Study Shows Benefits of Meditation for Mental Health',
+          description:
+            'A new study published in the Journal of the American Medical Association finds that practicing mindfulness meditation can lead to improved mental health outcomes for people struggling with depression and anxiety.',
+          isTop: false,
+          isNew: false,
+        },
+        {
+          title: 'NASA Launches New Mars Rover',
+          description:
+            "NASA's Perseverance rover successfully launches on a mission to explore Mars, with the goal of collecting samples of the planet's surface and searching for signs of ancient microbial life.",
+          isTop: false,
+          isNew: true,
+        },
+        {
+          title:
+            'GameStop Shares Soar as Reddit Traders Rally',
+          description:
+            'Shares of GameStop surge as amateur traders on the social media platform Reddit rally to drive up the price, in what some are calling a battle between Wall Street and Main Street.',
+          isTop: false,
+          isNew: false,
+        },
+        {
+          title:
+            'UK Announces Plan to Ban Sale of Gas-Powered Cars by 2030',
+          description:
+            'In an effort to combat climate change, the UK government announces a plan to ban the sale of new gas-powered cars and vans by 2030, with hybrid vehicles to follow in 2035.',
+          isTop: true,
+          isNew: false,
+        },
+        {
+          title:
+            'New Study Shows Link Between Exercise and Longevity',
+          description:
+            'A new study published in the Journal of the American Medical Association suggests that regular exercise can help people live longer, with participants who exercised regularly having a lower risk of premature death.',
+          isTop: false,
+          isNew: false,
+        },
+        {
+          title: 'Amazon Expands Grocery Delivery Service',
+          description:
+            'Amazon announces an expansion of its grocery delivery service, with plans to offer free delivery to Prime members on orders over $35 and to expand its selection of fresh and organic produce.',
+          isTop: false,
+          isNew: true,
+        },
       ],
-
-      item: {
-        head: ['#', 'color', 'price'],
-
-        body: [
-          ['id312', 'red', '1100$'],
-          ['id532', 'blue', '1050$'],
-          ['id643', 'dark', '999$'],
-        ],
-      },
-
-      param: {
-        title: 'Product params',
-        list: ['Экран 15.6', 'IPS (1920x1080)', 'Full HD'],
-      },
-
-      alert: {
-        isError: true,
-        text: 'Danger! This is a danger alert — check it out!',
-      },
-
     },
 
-    goodsOtherBlock: {
-      title: 'See other products',
+    goodsBlock: {
+      tabs: [
+        {
+          isActive: true,
+          isDisabled: false,
+          text: 'Electronics',
+        },
+        {
+          isActive: false,
+          isDisabled: false,
+          text: 'Home & Kitchen',
+        },
+        {
+          isActive: false,
+          isDisabled: false,
+          text: 'Clothing & Accessories',
+        },
+        {
+          isActive: false,
+          isDisabled: true,
+          text: 'Toys & Games',
+        },
+      ],
       cards: [
         {
           image: 'https://picsum.photos/400/200',
@@ -328,7 +363,7 @@ router.get('/shopproduct', function (req, res) {
           description:
             'The latest iPhone model features a new A15 Bionic chip, improved camera system, and longer battery life.',
           isHot: false,
-          idNew: false,
+          isNew: false,
         },
         {
           image: 'https://picsum.photos/400/200',
@@ -336,7 +371,7 @@ router.get('/shopproduct', function (req, res) {
           description:
             "Apple's high-end laptop features a 16-inch Retina display, powerful M1 Pro or M1 Max chip, and up to 64GB of RAM.",
           isHot: true,
-          idNew: false,
+          isNew: false,
         },
         {
           image: 'https://picsum.photos/400/200',
@@ -344,11 +379,49 @@ router.get('/shopproduct', function (req, res) {
           description:
             "Apple's premium wireless earbuds feature active noise cancellation, a customizable fit, and up to 4.5 hours of listening time.",
           isHot: false,
-          idNew: false,
+          isNew: false,
+        },
+        {
+          image: 'https://picsum.photos/400/200',
+          title: 'Sony Bravia XR A90J',
+          description:
+            'This OLED TV boasts a 4K resolution, HDR support, and a high refresh rate for smooth motion handling.',
+          isHot: false,
+          isNew: true,
+        },
+        {
+          image: 'https://picsum.photos/400/200',
+          title: 'Nintendo Switch OLED Model',
+          description:
+            'The latest iteration of the popular gaming console features a larger OLED screen and improved audio quality.',
+          isHot: false,
+          isNew: false,
+        },
+        {
+          image: 'https://picsum.photos/400/200',
+          title: 'Bose SoundLink Revolve+',
+          description:
+            'This portable Bluetooth speaker features 360-degree sound, water-resistant construction, and up to 16 hours of battery life.',
+          isHot: true,
+          isNew: true,
         },
       ],
     },
-
+    subscribe: {
+      header: 'Unlock Premium Content',
+      description:
+        'Subscribe to access exclusive content and features.',
+      buttons: [
+        {
+          text: 'Register Now',
+          link: 'https://www.youtube.com/',
+        },
+        {
+          text: 'Buy Subscription',
+          link: 'https://www.youtube.com/',
+        },
+      ],
+    },
     service: {
       title: 'Our Services',
       description:
@@ -357,7 +430,6 @@ router.get('/shopproduct', function (req, res) {
         {
           text: 'Show More',
           link: 'https://www.youtube.com/',
-          rel: 'show-more',
         },
       ],
     },
@@ -456,14 +528,13 @@ router.get('/shopproduct', function (req, res) {
     ],
   })
   //                  ↑↑ сюди вводимо JSON дані
-
+})
 
 // ================================================================
 
 router.get('/web', function (req, res) {
   //             ↙ cюди вводимо назву файлу з сontainer
   res.render('web', {
-    layout: "basic",
     web: {
       languages: [
         {
@@ -578,12 +649,6 @@ router.get('/web', function (req, res) {
                   type: 'string',
                   description:
                     'The ID of the element to find.',
-                  parameters: [
-                {
-                  name: 'id',
-                  type: 'string',
-                  description:
-                    'The ID of the element to find.',
                 },
               ],
             },
@@ -593,8 +658,7 @@ router.get('/web', function (req, res) {
     },
   })
 })
-
-=======
+// ================================================================
 //              ↙ тут вводимо шлях (PATH) до сторінки
 router.get('/program', function (req, res) {
   //             ↙ cюди вводимо назву файлу з сontainer
@@ -675,11 +739,12 @@ router.get('/program', function (req, res) {
             },
           },
         ],
-      } 
+      }
+  )
+})
 
 // ================================================================
-      
-      ↙ тут вводимо шлях (PATH) до сторінки
+      ↙ тут вводимо шлях(PATH) до сторінки
 router.get('/person', function (req, res) {
   //             ↙ cюди вводимо назву файлу з сontainer
   res.render('person', {
@@ -768,7 +833,7 @@ router.get('/person', function (req, res) {
                       ],
                     },
                   ],
-               },
+                },
               ],
             },
           ],
@@ -777,7 +842,6 @@ router.get('/person', function (req, res) {
     },
   })
 })
-
 // ================================================================
 
 //              ↙ тут вводимо шлях (PATH) до сторінки
