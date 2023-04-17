@@ -578,6 +578,22 @@ router.get('/web', function (req, res) {
                   type: 'string',
                   description:
                     'The ID of the element to find.',
+                  parameters: [
+                {
+                  name: 'id',
+                  type: 'string',
+                  description:
+                    'The ID of the element to find.',
+                },
+              ],
+            },
+          ],
+        },
+      ],
+    },
+  })
+})
+
 =======
 //              ↙ тут вводимо шлях (PATH) до сторінки
 router.get('/program', function (req, res) {
