@@ -457,13 +457,11 @@ router.get('/shopproduct', function (req, res) {
   })
   //                  ↑↑ сюди вводимо JSON дані
 
-
 // ================================================================
 
 router.get('/web', function (req, res) {
   //             ↙ cюди вводимо назву файлу з сontainer
   res.render('web', {
-    layout: "basic",
     web: {
       languages: [
         {
@@ -578,12 +576,6 @@ router.get('/web', function (req, res) {
                   type: 'string',
                   description:
                     'The ID of the element to find.',
-                  parameters: [
-                {
-                  name: 'id',
-                  type: 'string',
-                  description:
-                    'The ID of the element to find.',
                 },
               ],
             },
@@ -593,7 +585,6 @@ router.get('/web', function (req, res) {
     },
   })
 })
-
 =======
 //              ↙ тут вводимо шлях (PATH) до сторінки
 router.get('/program', function (req, res) {
