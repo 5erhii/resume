@@ -533,7 +533,7 @@ router.get('/shophome', function (req, res) {
 // ================================================================
 
 router.get('/web', function (req, res) {
-  //             ↙ cюди вводимо назву файлу з сontainer
+//             ↙ cюди вводимо назву файлу з сontainer
   res.render('web', {
     web: {
       languages: [
