@@ -740,204 +740,207 @@ router.get('/program', function (req, res) {
             },
           },
         ],
-      }
+      },
+    },
+  })
+})
 
-      // ================================================================
-      ↙ тут вводимо шлях(PATH) до сторінки
+// ================================================================
+//      ↙ тут вводимо шлях(PATH) до сторінки
 router.get('/person', function (req, res) {
-        //             ↙ cюди вводимо назву файлу з сontainer
-        res.render('person', {
-          layout: "person",
-          person: {
-            name: 'Emma Johnson',
-            age: 32,
-            gender: 'Female',
-            address: {
-              street: '123 Main St',
-              city: 'New York',
-              state: 'NY',
-              zip: '10001',
-              country: 'USA',
-            },
-            education: [
-              {
-                degree: 'Bachelor of Science',
-                major: 'Computer Science',
-                university:
-                  'Massachusetts Institute of Technology',
-                graduationYear: 2012,
-              },
-            ],
-            workExperience: [
-              {
-                company: 'Google',
-                title: 'Software Engineer',
-                startDate: '2012-06-01',
-                endDate: '2016-12-31',
-                responsibilities: [
-                  'Developed new features for Google Maps',
-                  'Worked on improving search algorithms',
-                ],
-                year_founded: 1990,
-                industry: 'Technology',
-                employees: [
-                  {
-                    name: 'John Smith',
-                    position: 'CEO',
-                    department: 'Executive',
-                    projects: [
-                      {
-                        name: 'Project Alpha',
-                        description:
-                          'Developing new software platform',
-                        status: 'In Progress',
-                        teams: [
-                          {
-                            team_name: 'Awesome Team',
-                            team_leader: {
-                              name: 'John Smith',
-                              title: 'Team Leader',
-                              email: 'john.smith@example.com',
-                            },
-                            team_members: [
-                              {
-                                name: 'Alice Johnson',
-                                title: 'Software Engineer',
-                                email:
-                                  'alice.johnson@example.com',
-                                skills: ['Java', 'Python', 'SQL'],
-                                projects: [
-                                  {
-                                    name: 'Project A',
-                                    description:
-                                      'Lorem ipsum dolor sit amet',
-                                    technologies: [
-                                      'Java',
-                                      'Spring Framework',
-                                    ],
-                                    team_members: [
-                                      {
-                                        name: 'Bob Lee',
-                                        title:
-                                          'Software Engineer',
-                                      },
-                                      {
-                                        name: 'Cindy Chen',
-                                        title: 'UI Designer',
-                                      },
-                                    ],
-                                  },
-                                ],
-                              },
-                            ],
-                          },
-                        ],
+  //             ↙ cюди вводимо назву файлу з сontainer
+  res.render('person', {
+    layout: "person",
+    person: {
+      name: 'Emma Johnson',
+      age: 32,
+      gender: 'Female',
+      address: {
+        street: '123 Main St',
+        city: 'New York',
+        state: 'NY',
+        zip: '10001',
+        country: 'USA',
+      },
+      education: [
+        {
+          degree: 'Bachelor of Science',
+          major: 'Computer Science',
+          university:
+            'Massachusetts Institute of Technology',
+          graduationYear: 2012,
+        },
+      ],
+      workExperience: [
+        {
+          company: 'Google',
+          title: 'Software Engineer',
+          startDate: '2012-06-01',
+          endDate: '2016-12-31',
+          responsibilities: [
+            'Developed new features for Google Maps',
+            'Worked on improving search algorithms',
+          ],
+          year_founded: 1990,
+          industry: 'Technology',
+          employees: [
+            {
+              name: 'John Smith',
+              position: 'CEO',
+              department: 'Executive',
+              projects: [
+                {
+                  name: 'Project Alpha',
+                  description:
+                    'Developing new software platform',
+                  status: 'In Progress',
+                  teams: [
+                    {
+                      team_name: 'Awesome Team',
+                      team_leader: {
+                        name: 'John Smith',
+                        title: 'Team Leader',
+                        email: 'john.smith@example.com',
                       },
-                    ],
-                  },
-                ],
-              },
-            ],
-          },
-        })
-      })
+                      team_members: [
+                        {
+                          name: 'Alice Johnson',
+                          title: 'Software Engineer',
+                          email:
+                            'alice.johnson@example.com',
+                          skills: ['Java', 'Python', 'SQL'],
+                          projects: [
+                            {
+                              name: 'Project A',
+                              description:
+                                'Lorem ipsum dolor sit amet',
+                              technologies: [
+                                'Java',
+                                'Spring Framework',
+                              ],
+                              team_members: [
+                                {
+                                  name: 'Bob Lee',
+                                  title:
+                                    'Software Engineer',
+                                },
+                                {
+                                  name: 'Cindy Chen',
+                                  title: 'UI Designer',
+                                },
+                              ],
+                            },
+                          ],
+                        },
+                      ],
+                    },
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+      ],
+    },
+  })
+})
 // ================================================================
 
 //              ↙ тут вводимо шлях (PATH) до сторінки
 router.get('/bio', function (req, res) {
-        //             ↙ cюди вводимо назву файлу з сontainer
-        res.render('bio', {
-          layout: 'bio',
-          name: 'Albert Einstein',
-          birthdate: 'March 14, 1879',
-          birthplace:
-            'Ulm, Kingdom of Württemberg, German Empire',
-          deathdate: 'April 18, 1955',
-          deathplace: 'Princeton, New Jersey, United States',
-          nationality: 'Swiss, German, American',
-          occupation: 'Theoretical Physicist',
-          known_for: [
-            'Theory of Relativity',
-            'E=mc²',
-            'Photoelectric Effect',
-            'Brownian Motion',
-          ],
-          education: [
-            {
-              degree: 'Doctor of Philosophy',
-              field: 'Physics',
-              institution: 'University of Zurich',
-              year: 1905,
-            },
-          ],
-          notable_publications: [
-            {
-              title: 'On the Electrodynamics of Moving Bodies',
-              year: 1905,
-              publisher: 'Annalen der Physik',
-            },
-            {
-              title:
-                'Does the Inertia of a Body Depend Upon Its Energy Content?',
-              year: 1905,
-              publisher: 'Annalen der Physik',
-            },
-          ],
-          partners: [
-            {
-              name: 'Mileva Marić',
-              relationship: 'First wife',
-              years: '1903-1919',
-            },
-            {
-              name: 'Elsa Einstein',
-              relationship:
-                "Second wife, also Einstein's first cousin",
-              years: '1919-1936',
-            },
-          ],
-          awards: [
-            {
-              title: 'Nobel Prize in Physics',
-              year: 1921,
-              description:
-                'Awarded for his explanation of the photoelectric effect',
-            },
-          ],
-          influences: [
-            'Isaac Newton',
-            'James Clerk Maxwell',
-            'Hermann Minkowski',
-          ],
-          influenced: [
-            'Niels Bohr',
-            'Erwin Schrödinger',
-            'Werner Heisenberg',
-            'Richard Feynman',
-          ],
-          quotes: [
-            'Imagination is more important than knowledge.',
-            'I have no special talent. I am only passionately curious.',
-            'The important thing is not to stop questioning.',
-            'The most beautiful thing we can experience is the mysterious. It is the source of all true art and all science.',
-          ],
-          major_discoveries: [
-            {
-              title: 'Photoelectric Effect',
-              year: 1905,
-              description:
-                'Einstein explained the photoelectric effect, where electrons are emitted from a metal surface when it is illuminated by light.',
-            },
-          ],
-          contributions: {
-            title: 'Inventions',
-            description:
-              'Leonardo designed and invented a wide variety of machines and devices, including a helicopter, a diving suit, and a self-propelled cart. Many of his inventions were centuries ahead of their time.',
-            year: 'Late 15th to early 16th century',
-            field: 'Invention',
-          },
-        })
-      })
+  //             ↙ cюди вводимо назву файлу з сontainer
+  res.render('bio', {
+    layout: 'bio',
+    name: 'Albert Einstein',
+    birthdate: 'March 14, 1879',
+    birthplace:
+      'Ulm, Kingdom of Württemberg, German Empire',
+    deathdate: 'April 18, 1955',
+    deathplace: 'Princeton, New Jersey, United States',
+    nationality: 'Swiss, German, American',
+    occupation: 'Theoretical Physicist',
+    known_for: [
+      'Theory of Relativity',
+      'E=mc²',
+      'Photoelectric Effect',
+      'Brownian Motion',
+    ],
+    education: [
+      {
+        degree: 'Doctor of Philosophy',
+        field: 'Physics',
+        institution: 'University of Zurich',
+        year: 1905,
+      },
+    ],
+    notable_publications: [
+      {
+        title: 'On the Electrodynamics of Moving Bodies',
+        year: 1905,
+        publisher: 'Annalen der Physik',
+      },
+      {
+        title:
+          'Does the Inertia of a Body Depend Upon Its Energy Content?',
+        year: 1905,
+        publisher: 'Annalen der Physik',
+      },
+    ],
+    partners: [
+      {
+        name: 'Mileva Marić',
+        relationship: 'First wife',
+        years: '1903-1919',
+      },
+      {
+        name: 'Elsa Einstein',
+        relationship:
+          "Second wife, also Einstein's first cousin",
+        years: '1919-1936',
+      },
+    ],
+    awards: [
+      {
+        title: 'Nobel Prize in Physics',
+        year: 1921,
+        description:
+          'Awarded for his explanation of the photoelectric effect',
+      },
+    ],
+    influences: [
+      'Isaac Newton',
+      'James Clerk Maxwell',
+      'Hermann Minkowski',
+    ],
+    influenced: [
+      'Niels Bohr',
+      'Erwin Schrödinger',
+      'Werner Heisenberg',
+      'Richard Feynman',
+    ],
+    quotes: [
+      'Imagination is more important than knowledge.',
+      'I have no special talent. I am only passionately curious.',
+      'The important thing is not to stop questioning.',
+      'The most beautiful thing we can experience is the mysterious. It is the source of all true art and all science.',
+    ],
+    major_discoveries: [
+      {
+        title: 'Photoelectric Effect',
+        year: 1905,
+        description:
+          'Einstein explained the photoelectric effect, where electrons are emitted from a metal surface when it is illuminated by light.',
+      },
+    ],
+    contributions: {
+      title: 'Inventions',
+      description:
+        'Leonardo designed and invented a wide variety of machines and devices, including a helicopter, a diving suit, and a self-propelled cart. Many of his inventions were centuries ahead of their time.',
+      year: 'Late 15th to early 16th century',
+      field: 'Invention',
+    },
+  })
+})
 
 // ================================================================
 
@@ -945,211 +948,211 @@ router.get('/bio', function (req, res) {
 
 //           ↙ тут вводимо шлях (PATH) до сторінки
 router.get('/shopnews', function (req, res) {
-        // res.render генерує нам HTML сторінку
+  // res.render генерує нам HTML сторінку
 
-        //            ↙ cюди вводимо назву файлу з сontainer
-        res.render('shopnews', {
-          layout: 'shop',
-          navigation: {
-            links: [
-              {
-                text: 'Home',
-                href: 'https://github.com/',
-              },
-              {
-                text: 'Contacts',
-                href: 'https://www.google.com/',
-              },
-              {
-                text: 'Help',
-                href: 'https://www.youtube.com/',
-              },
-            ],
-          },
+  //            ↙ cюди вводимо назву файлу з сontainer
+  res.render('shopnews', {
+    layout: 'shop',
+    navigation: {
+      links: [
+        {
+          text: 'Home',
+          href: 'https://github.com/',
+        },
+        {
+          text: 'Contacts',
+          href: 'https://www.google.com/',
+        },
+        {
+          text: 'Help',
+          href: 'https://www.youtube.com/',
+        },
+      ],
+    },
 
-          breadcrumb: [
-            { name: 'Home', url: 'https://github.com/' },
-            { name: 'News', url: 'https://www.google.com/' },
-            { name: 'Today', url: 'https://github.com/' },
-            { name: 'About cats', url: null },
-          ],
+    breadcrumb: [
+      { name: 'Home', url: 'https://github.com/' },
+      { name: 'News', url: 'https://www.google.com/' },
+      { name: 'Today', url: 'https://github.com/' },
+      { name: 'About cats', url: null },
+    ],
 
-          newsData: {
-            photo: 'https://picsum.photos/400/200',
+    newsData: {
+      photo: 'https://picsum.photos/400/200',
 
-            head: {
-              heading: 'About cats',
-              description:
-                "Cats are adorable and beloved pets that have been domesticated for thousands of years. They are known for their independent and playful nature, as well as their agility and hunting skills. With their soft fur, purring, and cuddling, cats make great companions and can bring joy and relaxation to their owners. From domestic short-hairs to exotic breeds, cats come in many shapes, sizes, and colors, each with their own unique personalities. Whether they are napping in a sunny spot or chasing a toy, cats always bring a smile to their owner's faces.",
-            },
+      head: {
+        heading: 'About cats',
+        description:
+          "Cats are adorable and beloved pets that have been domesticated for thousands of years. They are known for their independent and playful nature, as well as their agility and hunting skills. With their soft fur, purring, and cuddling, cats make great companions and can bring joy and relaxation to their owners. From domestic short-hairs to exotic breeds, cats come in many shapes, sizes, and colors, each with their own unique personalities. Whether they are napping in a sunny spot or chasing a toy, cats always bring a smile to their owner's faces.",
+      },
 
-            body: [
-              {
-                title: 'Cats have a keen sense of hearing',
-                text: 'With their highly sensitive ears, cats can detect sounds that are too faint for humans to hear, including the ultrasonic calls of rodents and other small prey.',
-              },
-              {
-                title: 'Cats are natural hunters',
-                text: 'Thanks to their sharp claws, quick reflexes, and stealthy movements, cats are excellent hunters. They can catch mice, rats, birds, and other prey with ease.',
-              },
-              {
-                title: 'Cats are independent creatures',
-                text: "Cats are known for their independent nature, and unlike dogs, they don't require constant attention and affection from their owners. They are perfectly content to entertain themselves with toys and explore their surroundings on their own.",
-              },
-              {
-                title: 'Cats have a unique way of communicating',
-                text: 'From meows and purrs to chirps and trills, cats use a variety of sounds to communicate with their owners and other cats. They also use body language, such as tail movements and ear positions, to convey their moods and intentions.',
-              },
-              {
-                title: 'Cats are good for your health',
-                text: 'Studies have shown that owning a cat can have numerous health benefits, including lower stress levels, reduced risk of heart disease and stroke, and improved mental health. Plus, cats make great companions and can provide a source of comfort and emotional support.',
-              },
-            ],
-          },
+      body: [
+        {
+          title: 'Cats have a keen sense of hearing',
+          text: 'With their highly sensitive ears, cats can detect sounds that are too faint for humans to hear, including the ultrasonic calls of rodents and other small prey.',
+        },
+        {
+          title: 'Cats are natural hunters',
+          text: 'Thanks to their sharp claws, quick reflexes, and stealthy movements, cats are excellent hunters. They can catch mice, rats, birds, and other prey with ease.',
+        },
+        {
+          title: 'Cats are independent creatures',
+          text: "Cats are known for their independent nature, and unlike dogs, they don't require constant attention and affection from their owners. They are perfectly content to entertain themselves with toys and explore their surroundings on their own.",
+        },
+        {
+          title: 'Cats have a unique way of communicating',
+          text: 'From meows and purrs to chirps and trills, cats use a variety of sounds to communicate with their owners and other cats. They also use body language, such as tail movements and ear positions, to convey their moods and intentions.',
+        },
+        {
+          title: 'Cats are good for your health',
+          text: 'Studies have shown that owning a cat can have numerous health benefits, including lower stress levels, reduced risk of heart disease and stroke, and improved mental health. Plus, cats make great companions and can provide a source of comfort and emotional support.',
+        },
+      ],
+    },
 
-          newsOtherBlock: {
-            title: 'See other news',
-            cards: [
-              {
-                title: 'NASA Launches New Mars Rover',
-                description:
-                  "NASA's Perseverance rover successfully launches on a mission to explore Mars, with the goal of collecting samples of the planet's surface and searching for signs of ancient microbial life.",
-                isTop: false,
-                idNew: true,
-              },
-              {
-                title:
-                  'GameStop Shares Soar as Reddit Traders Rally',
-                description:
-                  'Shares of GameStop surge as amateur traders on the social media platform Reddit rally to drive up the price, in what some are calling a battle between Wall Street and Main Street.',
-                isTop: false,
-                idNew: false,
-              },
-              {
-                title:
-                  'New Study Shows Link Between Exercise and Longevity',
-                description:
-                  'A new study published in the Journal of the American Medical Association suggests that regular exercise can help people live longer, with participants who exercised regularly having a lower risk of premature death.',
-                isTop: false,
-                idNew: false,
-              },
-              {
-                title: 'Amazon Expands Grocery Delivery Service',
-                description:
-                  'Amazon announces an expansion of its grocery delivery service, with plans to offer free delivery to Prime members on orders over $35 and to expand its selection of fresh and organic produce.',
-                isTop: false,
-                idNew: true,
-              },
-            ],
-          },
+    newsOtherBlock: {
+      title: 'See other news',
+      cards: [
+        {
+          title: 'NASA Launches New Mars Rover',
+          description:
+            "NASA's Perseverance rover successfully launches on a mission to explore Mars, with the goal of collecting samples of the planet's surface and searching for signs of ancient microbial life.",
+          isTop: false,
+          idNew: true,
+        },
+        {
+          title:
+            'GameStop Shares Soar as Reddit Traders Rally',
+          description:
+            'Shares of GameStop surge as amateur traders on the social media platform Reddit rally to drive up the price, in what some are calling a battle between Wall Street and Main Street.',
+          isTop: false,
+          idNew: false,
+        },
+        {
+          title:
+            'New Study Shows Link Between Exercise and Longevity',
+          description:
+            'A new study published in the Journal of the American Medical Association suggests that regular exercise can help people live longer, with participants who exercised regularly having a lower risk of premature death.',
+          isTop: false,
+          idNew: false,
+        },
+        {
+          title: 'Amazon Expands Grocery Delivery Service',
+          description:
+            'Amazon announces an expansion of its grocery delivery service, with plans to offer free delivery to Prime members on orders over $35 and to expand its selection of fresh and organic produce.',
+          isTop: false,
+          idNew: true,
+        },
+      ],
+    },
 
-          service: {
-            title: 'Our Services',
-            description:
-              'We offer a variety of services to meet your needs, including web design, content creation, and social media management.',
-            buttons: [
-              {
-                text: 'Show More',
-                link: 'https://www.youtube.com/',
-              },
-            ],
-          },
+    service: {
+      title: 'Our Services',
+      description:
+        'We offer a variety of services to meet your needs, including web design, content creation, and social media management.',
+      buttons: [
+        {
+          text: 'Show More',
+          link: 'https://www.youtube.com/',
+        },
+      ],
+    },
 
-          footer: [
-            [
-              {
-                text: 'Home',
-                link: 'https://www.youtube.com/',
-              },
-              {
-                text: 'Trending',
-                link: 'https://www.youtube.com/feed/trending',
-              },
-              {
-                text: 'Subscriptions',
-                link: 'https://www.youtube.com/feed/subscriptions',
-              },
-              {
-                text: 'Library',
-                link: 'https://www.youtube.com/feed/library',
-              },
-            ],
-            [
-              {
-                text: 'History',
-                link: 'https://www.youtube.com/feed/history',
-              },
-              {
-                text: 'Your Videos',
-                link: 'https://www.youtube.com/feed/my_videos',
-              },
-              {
-                text: 'Live',
-                link: 'https://www.youtube.com/live',
-              },
-              {
-                text: 'Settings',
-                link: 'https://www.youtube.com/account',
-              },
-            ],
-            [
-              {
-                text: 'Watch Later',
-                link: 'https://www.youtube.com/playlist?list=WL',
-              },
-              {
-                text: 'Liked Videos',
-                link: 'https://www.youtube.com/playlist?list=LL',
-              },
-              {
-                text: 'Music',
-                link: 'https://www.youtube.com/music',
-              },
-              {
-                text: 'Gaming',
-                link: 'https://www.youtube.com/gaming',
-              },
-            ],
-            [
-              {
-                text: 'Sports',
-                link: 'https://www.youtube.com/channel/UCo_q6aOlvPH7M-j_XGWVgXg',
-              },
-              {
-                text: 'News',
-                link: 'https://www.youtube.com/news',
-              },
-              {
-                text: 'Fashion & Beauty',
-                link: 'https://www.youtube.com/channel/UC1x8rV_f-2yPpzlN0JWZXIQ',
-              },
-              {
-                text: 'Learning',
-                link: 'https://www.youtube.com/learning',
-              },
-            ],
-            [
-              {
-                text: 'Report History',
-                link: 'https://www.youtube.com/feed/history/report_history',
-              },
-              {
-                text: 'Help',
-                link: 'https://support.google.com/youtube/?hl=en',
-              },
-              {
-                text: 'Send Feedback',
-                link: 'https://support.google.com/youtube/answer/4347644?hl=en',
-              },
-              {
-                text: 'About',
-                link: 'https://www.youtube.com/about/',
-              },
-            ],
-          ],
-        })
-        //                  ↑↑ сюди вводимо JSON дані
-      })
+    footer: [
+      [
+        {
+          text: 'Home',
+          link: 'https://www.youtube.com/',
+        },
+        {
+          text: 'Trending',
+          link: 'https://www.youtube.com/feed/trending',
+        },
+        {
+          text: 'Subscriptions',
+          link: 'https://www.youtube.com/feed/subscriptions',
+        },
+        {
+          text: 'Library',
+          link: 'https://www.youtube.com/feed/library',
+        },
+      ],
+      [
+        {
+          text: 'History',
+          link: 'https://www.youtube.com/feed/history',
+        },
+        {
+          text: 'Your Videos',
+          link: 'https://www.youtube.com/feed/my_videos',
+        },
+        {
+          text: 'Live',
+          link: 'https://www.youtube.com/live',
+        },
+        {
+          text: 'Settings',
+          link: 'https://www.youtube.com/account',
+        },
+      ],
+      [
+        {
+          text: 'Watch Later',
+          link: 'https://www.youtube.com/playlist?list=WL',
+        },
+        {
+          text: 'Liked Videos',
+          link: 'https://www.youtube.com/playlist?list=LL',
+        },
+        {
+          text: 'Music',
+          link: 'https://www.youtube.com/music',
+        },
+        {
+          text: 'Gaming',
+          link: 'https://www.youtube.com/gaming',
+        },
+      ],
+      [
+        {
+          text: 'Sports',
+          link: 'https://www.youtube.com/channel/UCo_q6aOlvPH7M-j_XGWVgXg',
+        },
+        {
+          text: 'News',
+          link: 'https://www.youtube.com/news',
+        },
+        {
+          text: 'Fashion & Beauty',
+          link: 'https://www.youtube.com/channel/UC1x8rV_f-2yPpzlN0JWZXIQ',
+        },
+        {
+          text: 'Learning',
+          link: 'https://www.youtube.com/learning',
+        },
+      ],
+      [
+        {
+          text: 'Report History',
+          link: 'https://www.youtube.com/feed/history/report_history',
+        },
+        {
+          text: 'Help',
+          link: 'https://support.google.com/youtube/?hl=en',
+        },
+        {
+          text: 'Send Feedback',
+          link: 'https://support.google.com/youtube/answer/4347644?hl=en',
+        },
+        {
+          text: 'About',
+          link: 'https://www.youtube.com/about/',
+        },
+      ],
+    ],
+  })
+  //                  ↑↑ сюди вводимо JSON дані
+})
 
 // Підключаємо роутер до бек-енду
 module.exports = router
