@@ -591,7 +591,7 @@ router.get('/task21', function (req, res) {
         {
           text: 'Bootstrap',
           url: 'https://getbootstrap.com/',
-            },
+        },
       ],
     },
   })
@@ -682,8 +682,8 @@ router.get('/mac', function (req, res) {
         {
           name: 'USB-C to USB Adapter',
           price: 19.99,
-  },
-  ],
+        },
+      ],
     },
   })
 })
@@ -845,7 +845,7 @@ router.get('/facebook', function (req, res) {
       },
     ],
   })
- })
+})
 
 // ================================================================
 // router.get Створює нам один ентпоїнт
@@ -1640,7 +1640,7 @@ router.get('/shophome', function (req, res) {
 // ================================================================
 
 router.get('/web', function (req, res) {
-//             ↙ cюди вводимо назву файлу з сontainer
+  //             ↙ cюди вводимо назву файлу з сontainer
   res.render('web', {
     web: {
       languages: [
@@ -1756,7 +1756,7 @@ router.get('/web', function (req, res) {
                   type: 'string',
                   description:
                     'The ID of the element to find.',
-               },
+                },
               ],
             },
           ],
@@ -1852,7 +1852,7 @@ router.get('/program', function (req, res) {
 })
 
  // ================================================================
-↙ тут вводимо шлях (PATH) до сторінки
+↙ тут вводимо шлях(PATH) до сторінки
 
 router.get('/person', function (req, res) {
   //             ↙ cюди вводимо назву файлу з сontainer
@@ -2327,7 +2327,7 @@ router.get('/shopproduct', function (req, res) {
           ['id643', 'dark', '999$'],
         ],
       },
-      
+
       param: {
         title: 'Product params',
         list: ['Экран 15.6', 'IPS (1920x1080)', 'Full HD'],
@@ -2337,7 +2337,7 @@ router.get('/shopproduct', function (req, res) {
         isError: true,
         text: 'Danger! This is a danger alert — check it out!',
       },
-      
+
     },
 
     goodsOtherBlock: {
