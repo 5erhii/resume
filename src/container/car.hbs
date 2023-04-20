@@ -1,0 +1,140 @@
+<div>
+    <section>
+    {{> title data="TOYOTA" big=true}}
+    <ul>
+        <li><h4>Make: <i>{{make}}</i></h4></li>
+        <li><h4>Model: <i>{{model}}</i></h4></li>
+        <li><h4>Year: <i>{{year}}</i></h4></li>
+        <li><h4>Color: <i>{{color}}</i></h4></li>
+        <li><h4>Features:</h4> {{#with features}}<details>
+            <ul>
+                <li><h5>Interior: </h5>{{#with interior}}
+                    <ul>
+                        <li><b>Seats: </b> {{#with seats}} <details>
+                            <dd><b>Meterial: </b>{{material}}</dd>
+                            <dd><b>Color: </b>{{color}}</dd>
+                            <dd><b>Heated: </b>{{heated}}</dd>
+                            <dd><b>Ventilated: </b>{{ventilated}}</dd>
+                        </details>{{/with}}
+                        </li>
+                        <li><b>Dashboard: </b> <i></i>{{#with dashboard}} <details>
+                            <dd><b>Meterial: </b><i></i>{{material}}</dd>
+                            <dd><b>Color: </b><i></i>{{color}}</dd>
+                            <dd><b>Display: </b>{{#with display}}
+                                <dl>
+                                    <dd><b>- type: </b>{{type}}</dd>
+                                    <dd><b>- size: </b>{{size}}</dd>
+                                    <dd><b>- resolution: </b>{{resolution}}</dd>
+                                    <dd><b>- touchscreen: </b>{{touchscreen}}</dd>
+                                </dl>
+                            {{/with}}
+                            </dd>
+                        </details>{{/with}}
+                        </li>
+                        <li><b>Audio: </b> {{#with audio}} <details>
+                            <dd><b>System: </b>{{system}}</dd>
+                            <dd><b>Speakers: </b>{{speakers}}</dd>
+                            <dd><b>Subwoofer: </b>{{subwoofer}}</dd>
+                            <dd><b>Bluetooth: </b>{{bluetooth}}</dd>
+                            <dd><b>USB: </b>{{USB}}</dd>
+                        </details>{{/with}}
+                        </li> 
+                    </ul>
+                {{/with}} 
+                </li>
+                <hr>
+                <li><h5>Exterior: </h5>{{#with exterior}}  
+                    <ul>
+                        <li><b>Wheels: </b> {{#with wheels}}<details>
+                            <dd><b>Size: </b>{{size}}</dd>
+                            <dd><b>Type: </b>{{type}}</dd>
+                            <dd><b>Color: </b>{{color}}</dd>
+                        </details>{{/with}}
+                        </li>
+                        <li><b>Headlights: </b> {{#with headlights}}<details>
+                            <dd><b>Type: </b>{{type}}</dd>
+                            <dd><b>Brightness: </b>{{brightness}}</dd>
+                            <dd><b>Automatic: </b>{{automatic}}</dd>
+                        </details>{{/with}}
+                        </li>
+                        <li><b>Sunroof: </b> {{#with sunroof}}<details>
+                            <dd><b>Type: </b>{{type}}</dd>
+                            <dd><b>Size: </b>{{size}}</dd>
+                            <dd><b>Automatic: </b>{{automatic}}</dd>
+                        </details>{{/with}}
+                        </li> 
+                    </ul>
+                 {{/with}}      
+                </li>      
+                <hr>
+                <li><h5>Safety: </h5>{{#with safety}}    
+                    <ul>
+                        <li><b>Airbags: </b> {{#with airbags}}<details>
+                            <dd><b>Front: </b>{{front}}</dd>
+                            <dd><b>Side: </b>{{side}}</dd>
+                            <dd><b>Knee: </b>{{knee}}</dd>
+                            <dd><b>Rear: </b>{{rear}}</dd>
+                        </details>{{/with}}
+                        </li>
+                        <li><b>Assistance: </b> {{#with assistance}}<details>
+                            <dd><b>Blind_spot_monitoring: </b>{{blind_spot_monitoring}}</dd>
+                            <dd><b>Rear_cross_traffic_alert: </b>{{rear_cross_traffic_alert}}</dd>
+                            <dd><b>Lane_departure_warning: </b>{{lane_departure_warning}}</dd>
+                            <dd><b>Adaptive_cruise_control: </b>{{adaptive_cruise_control}}</dd>
+                            <dd><b>Collision_warning: </b>{{collision_warning}}</dd>
+                        </details>{{/with}}
+                        </li>
+                    </ul>
+                {{/with}}     
+                </li>    
+            </ul>
+        </details>{{/with}}
+        </li>
+        <hr>
+        <li><h4>Engine:</h4> {{#with engine}}<details>
+            <ul>
+                <li><h5>Type: <i>{{type}}</i></h5></li>
+                <li><h5>Displacement: <i>{{displacement}}</i></h5></li>
+                <li><h5>Horsepower: <i>{{horsepower}}</i></h5></li>
+                <li><h5>Torque: <i>{{torque}}</i></h5></li>
+                <li><h5>Transmission: </h5>{{#with transmission}}<details>
+                    <dl>
+                        <dd><b>Type: </b>{{type}}</dd>
+                        <dd><b>Gears: </b>{{gears}}</dd>
+                    </dl>
+                </details>{{/with}}
+                </li>
+            </ul>
+        </details>{{/with}}
+        </li>
+        <hr>
+        <li><h4>Fuel economy:</h4>{{#with fuel_economy}}<details>
+            <ul>
+                <li><h5>City: <i>{{city}}</i></h5></li>
+                <li><h5>Highway: <i>{{highway}}</i></h5></li>
+                <li><h5>Combined: <i>{{combined}}</i></h5></li>
+            </ul>
+        </details>{{/with}}
+        </li>
+        <hr>
+        <li><h4>Price:</h4>{{#with price}}<details>
+            <ul>
+                <li><h5>Base: <i>{{base}}</i></h5></li>
+                <li><h5>Destination: <i>{{destination}}</i></h5></li>
+                <li><h5>Options: </h5>{{#with options}}
+                    <dl>
+                        <dd><b>Navigation: </b>{{navigation}}</dd>
+                        <dd><b>Moonroof: </b>{{moonroof}}</dd>
+                        <dd><b>Premium_paint: </b>{{premium_paint}}</dd>
+                    </dl>
+                {{/with}}
+                </li>    
+                <li><h5>Total: <i>{{total}}</i></h5></li>
+            </ul>
+ {{/with}}
+ </details>
+ </li>
+ <hr>
+    </ul>
+    </section>
+</div>
