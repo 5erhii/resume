@@ -1,0 +1,18 @@
+<div class='col-4'>
+  <div class='card'>
+    <div class='card text-bg-dark'>
+      <img src='{{image}}' />
+    </div>
+    <div class='card-body'>
+      <div class='card-title'><strong>{{title}}</strong>
+        {{#if isHot}}
+          <span class='badge text-bg-warning'>HOT!</span>
+        {{/if}}
+        {{#if isNew}}
+          <span class='badge text-bg-primary'>Нове</span>
+        {{/if}}
+      </div>
+      <p class='card-text'>{{description}}</p>
+    </div>
+  </div>
+</div>
