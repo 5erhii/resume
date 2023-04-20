@@ -1,0 +1,20 @@
+{{#if @first}}
+  <input
+    class='form-check-input'
+    type='radio'
+    name='flexRadio'
+    checked
+  />
+{{else}}
+  <input
+    class='form-check-input'
+    type='radio'
+    name='flexRadio'
+  />
+{{/if}}
+{{#if type}}
+  <label class='form-check-label'>{{type}}</label>
+{{else}}
+  <label class='form-check-label'>{{this}}</label>
+{{/if}}
+<div class='form-text'>{{description}}</div>
