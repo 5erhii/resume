@@ -44,10 +44,7 @@ router.get('/', function (req, res) {
 })
 
 // ================================================================
-
-//              ↙ тут вводимо шлях (PATH) до сторінки
 router.get('/summary', function (req, res) {
-  //             ↙ cюди вводимо назву файлу з сontainer
   res.render('summary', {
     // ↙ сюди вводимо JSON дані
     page: {
@@ -75,10 +72,7 @@ router.get('/summary', function (req, res) {
 })
 
 // ================================================================
-
-//              ↙ тут вводимо шлях (PATH) до сторінки
 router.get('/skills', function (req, res) {
-  //             ↙ cюди вводимо назву файлу з сontainer
   res.render('skills', {
     // ↙ сюди вводимо JSON дані
     page: {
@@ -126,10 +120,7 @@ router.get('/skills', function (req, res) {
 })
 
 // ================================================================
-
-//              ↙ тут вводимо шлях (PATH) до сторінки
 router.get('/education', function (req, res) {
-  //             ↙ cюди вводимо назву файлу з сontainer
   res.render('education', {
     // ↙ сюди вводимо JSON дані
     page: {
@@ -155,13 +146,8 @@ router.get('/education', function (req, res) {
 })
 
 // ================================================================
-
-//              ↙ тут вводимо шлях (PATH) до сторінки
 router.get('/work', function (req, res) {
-  //             ↙ cюди вводимо назву файлу з сontainer
   res.render('work', {
-    // ↙ сюди вводимо JSON дані
-
     layout: "big",
 
     page: {
@@ -238,13 +224,7 @@ router.get('/work', function (req, res) {
 })
 
 // ================================================================
-// router.get Створює нам один ентпоїнт
-//           ↙ тут вводимо шлях (PATH) до сторінки
-
 router.get('/shophome', function (req, res) {
-  // res.render генерує нам HTML сторінку
-
-  //            ↙ cюди вводимо назву файлу з сontainer
   res.render('shophome', {
     layout: 'shop',
     navigation: {
@@ -528,11 +508,7 @@ router.get('/shophome', function (req, res) {
 })
 
 // ================================================================
-
 router.get('/task21', function (req, res) {
-  // res.render генерує нам HTML сторінку
-
-  //            ↙ cюди вводимо назву файлу з сontainer
   res.render('task21', {
     layout: "basic",
     heading: {
@@ -595,17 +571,10 @@ router.get('/task21', function (req, res) {
       ],
     },
   })
-  //                  ↑↑ сюди вводимо JSON дані
 })
 
 // ================================================================
-
-// router.get Створює нам один ентпоїнт
-
 router.get('/mac', function (req, res) {
-  // res.render генерує нам HTML сторінку
-
-  //            ↙ cюди вводимо назву файлу з сontainer
   res.render('mac', {
     layout: "basic",
     name: 'Apple MacBook Pro',
@@ -689,12 +658,7 @@ router.get('/mac', function (req, res) {
 })
 
 // ================================================================
-// router.get Створює нам один ентпоїнт
-
 router.get('/facebook', function (req, res) {
-  // res.render генерує нам HTML сторінку
-
-  //            ↙ cюди вводимо назву файлу з сontainer
   res.render('facebook', {
     layout: "basic",
     name: 'Facebook',
@@ -848,13 +812,7 @@ router.get('/facebook', function (req, res) {
 })
 
 // ================================================================
-// router.get Створює нам один ентпоїнт
-
-//           ↙ тут вводимо шлях (PATH) до сторінки
 router.get('/task22', function (req, res) {
-  // res.render генерує нам HTML сторінку
-
-  //            ↙ cюди вводимо назву файлу з сontainer
   res.render('task22', {
     layout: 'basic',
     page_header: {
@@ -912,9 +870,6 @@ router.get('/task22', function (req, res) {
 // ================================================================
 
 router.get('/car', function (req, res) {
-  // res.render генерує нам HTML сторінку
-
-  //            ↙ cюди вводимо назву файлу з сontainer
   res.render('car', {
     layout: "basic",
     make: 'Toyota',
@@ -1009,14 +964,7 @@ router.get('/car', function (req, res) {
 })
 
 // ================================================================
-
-// router.get Створює нам один ентпоїнт
-
-//           ↙ тут вводимо шлях (PATH) до сторінки
 router.get('/task31', function (req, res) {
-  // res.render генерує нам HTML сторінку
-
-  //            ↙ cюди вводимо назву файлу з сontainer
   res.render('task31', {
     layout: 'basic',
     navigation: {
@@ -1264,14 +1212,10 @@ router.get('/task31', function (req, res) {
       ],
     },
   })
-  //                  ↑↑ сюди вводимо JSON дані
 })
+
 // ================================================================
-
 router.get('/js', function (req, res) {
-  // res.render генерує нам HTML сторінку
-
-  //            ↙ cюди вводимо назву файлу з сontainer
   res.render('js', {
     layout: "basic",
     name: 'JavaScript',
@@ -1347,14 +1291,7 @@ router.get('/js', function (req, res) {
 })
 
 // ================================================================
-
-// router.get Створює нам один ентпоїнт
-
-//           ↙ тут вводимо шлях (PATH) до сторінки
 router.get('/shophome', function (req, res) {
-  // res.render генерує нам HTML сторінку
-
-  //            ↙ cюди вводимо назву файлу з сontainer
   res.render('shophome', {
     layout: 'shop',
     navigation: {
@@ -1634,13 +1571,10 @@ router.get('/shophome', function (req, res) {
       ],
     ],
   })
-  //                  ↑↑ сюди вводимо JSON дані
 })
 
 // ================================================================
-
 router.get('/web', function (req, res) {
-  //             ↙ cюди вводимо назву файлу з сontainer
   res.render('web', {
     web: {
       languages: [
@@ -1765,10 +1699,9 @@ router.get('/web', function (req, res) {
     },
   })
 })
+
 // ================================================================
-//              ↙ тут вводимо шлях (PATH) до сторінки
 router.get('/program', function (req, res) {
-  //             ↙ cюди вводимо назву файлу з сontainer
   res.render('program', {
     layout: "program",
     program: {
@@ -1853,7 +1786,6 @@ router.get('/program', function (req, res) {
 
 // ================================================================
 router.get('/person', function (req, res) {
-  //             ↙ cюди вводимо назву файлу з сontainer
   res.render('person', {
     layout: "person",
     person: {
@@ -1949,11 +1881,9 @@ router.get('/person', function (req, res) {
     },
   })
 })
-// ================================================================
 
-//              ↙ тут вводимо шлях (PATH) до сторінки
+// ================================================================
 router.get('/bio', function (req, res) {
-  //             ↙ cюди вводимо назву файлу з сontainer
   res.render('bio', {
     layout: 'bio',
     name: 'Albert Einstein',
@@ -2048,14 +1978,7 @@ router.get('/bio', function (req, res) {
 })
 
 // ================================================================
-
-// router.get Створює нам один ентпоїнт
-
-//           ↙ тут вводимо шлях (PATH) до сторінки
 router.get('/shopnews', function (req, res) {
-  // res.render генерує нам HTML сторінку
-
-  //            ↙ cюди вводимо назву файлу з сontainer
   res.render('shopnews', {
     layout: 'shop',
     navigation: {
@@ -2256,17 +2179,10 @@ router.get('/shopnews', function (req, res) {
       ],
     ],
   })
-  //                  ↑↑ сюди вводимо JSON дані
 })
+
 // ================================================================
-
-// router.get Створює нам один ентпоїнт
-
-//           ↙ тут вводимо шлях (PATH) до сторінки
 router.get('/shopproduct', function (req, res) {
-  // res.render генерує нам HTML сторінку
-
-  //            ↙ cюди вводимо назву файлу з сontainer
   res.render('shopproduct', {
     layout: 'shop',
     navigation: {
@@ -2474,7 +2390,6 @@ router.get('/shopproduct', function (req, res) {
       ],
     ],
   })
-  //                  ↑↑ сюди вводимо JSON дані
 })
 
 
