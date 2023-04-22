@@ -3002,7 +3002,8 @@ router.get('/shopprofile', function (req, res) {
 
 // ================================================================
 router.get('/shopreview', function (req, res) {
-  res.render('shopreview', {
+res.render('shopreview', {
+
     layout: 'shop',
     navigation: {
       links: [
@@ -3281,7 +3282,6 @@ router.get('/shopreview', function (req, res) {
     ],
   })
 })
-
 
 // ================================================================
 router.get('/shopcatalog', function (req, res) {
@@ -3651,5 +3651,6 @@ router.get('/shopcatalog', function (req, res) {
     ],
   })
 })
+
 // Підключаємо роутер до бек-енду
 module.exports = router
