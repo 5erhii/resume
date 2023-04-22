@@ -6,28 +6,32 @@
 <div>
 	{{#with main}}
 	<main>
-  		<section>
-		{{> title data="My education" big=true}}
-    		<ul>
-     			{{#each educations}}
-	  			<li>
-					{{name}} {{#unless isEnd}} (ще в процесі) {{/unless}}
-				</li>
-	  			{{/each}}
-    		</ul>
-  		</section>
-		<section>
-		{{> title data="My Certificates"}}
+		<div class="card p-1">
+			<div class="card-header">
+				{{> title data="My education" big=true}}
+			</div>
 			<ul>
-				{{#each certificates}}
+				{{#each educations}}
 				<li>
-					{{name}} ({{id}}) 
+					{{name}} {{#unless isEnd}} (ще в процесі) {{/unless}}
 				</li>
 				{{/each}}
 			</ul>
-		</section>
+		</div>
+		<div class="card mt-2 p-1">
+			<div class="card-header">
+				{{> title data="My Certificates"}}
+			</div>
+			<ul>
+				{{#each certificates}}
+				<li>
+					{{name}} ({{id}})
+				</li>
+				{{/each}}
+			</ul>
+			</section>
 	</main>
-  {{/with}}
+	{{/with}}
 </div>
 
 {{!--

@@ -35,11 +35,13 @@ var footer = {
 // ================================================================
 
 //           ↙ тут вводимо шлях (PATH) до сторінки
-router.get('/', function (req, res) {
+router.get('/index', function (req, res) {
   // res.render генерує нам HTML сторінку
 
   //            ↙ cюди вводимо назву файлу з сontainer
-  res.render('index', {})
+  res.render('index', {
+    layout: 'index',
+  })
   //                  ↑↑ сюди вводимо JSON дані
 })
 
@@ -148,7 +150,7 @@ router.get('/education', function (req, res) {
 // ================================================================
 router.get('/work', function (req, res) {
   res.render('work', {
-    layout: "big",
+    layout: "default",
 
     page: {
       title: "Resume || Work",
@@ -2708,7 +2710,7 @@ router.get('/shopcart', function (req, res) {
       ],
     ],
   })
- })
+})
 
 // ================================================================
 router.get('/shopprofile', function (req, res) {
@@ -3002,7 +3004,7 @@ router.get('/shopprofile', function (req, res) {
 
 // ================================================================
 router.get('/shopreview', function (req, res) {
-res.render('shopreview', {
+  res.render('shopreview', {
 
     layout: 'shop',
     navigation: {
@@ -3651,6 +3653,11 @@ router.get('/shopcatalog', function (req, res) {
     ],
   })
 })
-
+// ================================================================
+router.get('/bootstrap', function (req, res) {
+  res.render('bootstrap', {
+    layout: 'bootstrap',
+  })
+})
 // Підключаємо роутер до бек-енду
 module.exports = router

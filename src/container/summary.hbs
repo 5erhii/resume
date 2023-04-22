@@ -6,24 +6,28 @@
 <div>
     {{#with main}}
     <main>
-        <section>
-            {{> title data=summary.title big=true}}
+        <div class="card p-1">
+            <div class="card-header">
+                {{> title data=summary.title big=true}}
+            </div>
             <div>
                 <p>
                     {{summary.text}}
                 </p>
             </div>
-        </section>
+        </div>
 
         {{#with experience}}
-        <section>
-            {{> title data=title}}
+        <div class="card mt-2 p-1">
+            <div class="card-header">
+                {{> title data=title}}
+            </div>
             <div>
                 <p>
                     {{text}}
                 </p>
             </div>
-        <section>
+        </div>
         {{/with}}
     </main>
     {{/with}}

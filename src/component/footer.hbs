@@ -1,19 +1,14 @@
 {{#with footer}}
-<footer>
-	<div>
-		{{#with sotial}}
-			{{> link text=email.text href=email.href blank=true }}
-			{{> link text=phone.text href=phone.href blank=true }}
-			{{> link text=linkedin.text href=linkedin.href blank=true noLine=true }}
-		{{/with}}
-	</div>
-	<br>
-	<div>
-		<em>Copyright by {{firstname}} {{lastname}}</em>
-	</div>
-	<br>
-	<div>
-		<address>{{address}}</address>
-	</div>
-</footer>
+<div>
+	<h5 style="color:blue">Contact information</h5>
+	{{#with sotial}}
+	{{> link text=email.text href=email.href blank=true }}
+	{{> link text=phone.text href=phone.href blank=true }}
+	{{> link text=linkedin.text href=linkedin.href blank=true noLine=true }}
+	{{/with}}
+</div>
+<hr>
+{{/with}}
+{{#with header}}
+<em>Copyright by {{name.firstname}} {{name.lastname}}</em>
 {{/with}}
