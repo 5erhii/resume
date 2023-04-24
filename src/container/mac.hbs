@@ -1,88 +1,112 @@
 <div>
     <section>
-    {{> title data="MAC" big=true}}
-        <div>
-            <p><b>Product name: </b><i>{{name}}</i></p>
-            <p><b>Description: </b><i>{{description}}</i></p> 
-            <p><b>Price: </b><i>{{price}}</i></p>
-            <p><b>Category: </b><i>{{category}}</i></p>
-        </div>
-        <div>
-            <p><b>Features:</b></p>{{#with features}}
-            <ul>
-                <li><b>Processor: </b><details>{{#with processor}}
-                    <dd>Brand: <i>{{brand}}</i></dd>
-                    <dd>Model: <i>{{model}}</i></dd>
-                    <dd>Speed: <i>{{speed}}</i></dd>
-                    <dd>Cores: <i>{{cores}}</i></dd>
-                    <dd>Cache: <i>{{cache}}</i></dd>
-                    <hr> 
-                    {{/with}}</details>
-                </li>
-                <li><b>Memory: </b><details>{{#with memory}}
-                    <dd>Type: <i>{{type}}</i></dd>
-                    <dd>Size: <i>{{size}}</i></dd>
-                    <dd>Speed: <i>{{speed}}</i></dd>
-                    <hr>   
-                    {{/with}}</details>
-                </li>
-                <li><b>Storage: </b><details>{{#with storage}}
-                    <dd>Type: <i>{{type}}</i></dd>
-                    <dd>Size: <i>{{size}}</i></dd>
-                    <hr>   
-                    {{/with}}</details>
-                </li>
-                <li><b>Display: </b><details>{{#with display}}
-                    <dd>Size: <i>{{size}}</i></dd>
-                    <dd>Resolution: <i>{{resolution}}</i></dd>
-                    <dd>Technology: <i>{{technology}}</i></dd>
-                    <dd>Color space: <i>{{color_space}}</i></dd>
-                    <dd>Brightness: <i>{{brightness}}</i></dd>
-                    <dd>Refresh_rate: <i>{{refresh_rate}}</i></dd>
-                    <hr> 
-                    {{/with}}</details>
-                </li>   
-                <li><b>Graphics: </b><details>{{#with graphics}}
-                    <dd>Brand: <i>{{brand}}</i></dd>
-                    <dd>Model: <i>{{model}}</i></dd>
-                    <dd>Memory: <i>{{memory}}</i></dd>
-                    <hr>   
-                    {{/with}}</details>
-                </li> 
-                <li><b>Ports: </b><details>{{#each ports}}
-                    <dd>Type: <i>{{type}}</i></dd>
-                    <dd>Count: <i>{{count}}</i></dd>
-                    <dd>{{#if features}} Features: {{features}}
-                        {{else}}
-                        {{/if}}
-                    </dd>
-                    <hr>   
-                    {{/each}}</details>
-                </li> 
-                <li><b>Battery: </b><details>{{#with battery}}
-                    <dd>Type: <i>{{type}}</i></dd>
-                    <dd>Capacity: <i>{{capacity}}</i></dd>
-                    <dd>Life: <i>{{life}}</i></dd>
-                    <hr>   
-                    {{/with}}</details>
-                </li> 
-                <li><b>Weight: </b>{{weight}}</li>
-                <li><b>Dimensions: </b><details>{{#with dimensions}}
-                    <dd>Height: <i>{{height}}</i></dd>
-                    <dd>Width: <i>{{width}}</i></dd>
-                    <dd>Depth: <i>{{depth}}</i></dd>
-                    <hr>   
-                    {{/with}}</details>
-                </li> 
-                <li><b>Operating system: </b>{{operating_system}}</li>
-                <li><b>Accessories: </b><details>{{#each accessories}}
-                    <dd>Name: <i>{{name}}</i></dd>
-                    <dd>Price: <i>{{price}}</i></dd>
-               git     <hr>   
-                    {{/each}}</details>
-                </li>   
-            </ul>
-            {{/with}}
+        {{> title data="MAC" big=true}}
+        <div class="card p-2">
+            <div class="card-header">
+                <p><b>Product name: </b><i>{{name}}</i></p>
+                <p><b>Description: </b><i>{{description}}</i></p>
+                <p><b>Price: </b><i>{{price}}</i></p>
+                <p><b>Category: </b><i>{{category}}</i></p>
+            </div>
+
+            <div class="card-body">
+                <b>Features:</b>
+                {{#with features}}
+                <ul>
+
+                    <li><b>Processor: </b>
+                        <details>{{#with processor}}
+                            <dd>Brand: <i>{{brand}}</i></dd>
+                            <dd>Model: <i>{{model}}</i></dd>
+                            <dd>Speed: <i>{{speed}}</i></dd>
+                            <dd>Cores: <i>{{cores}}</i></dd>
+                            <dd>Cache: <i>{{cache}}</i></dd>
+                            <hr>
+                            {{/with}}
+                        </details>
+                    </li>
+                    <li><b>Memory: </b>
+                        <details>{{#with memory}}
+                            <dd>Type: <i>{{type}}</i></dd>
+                            <dd>Size: <i>{{size}}</i></dd>
+                            <dd>Speed: <i>{{speed}}</i></dd>
+                            <hr>
+                            {{/with}}
+                        </details>
+                    </li>
+                    <li><b>Storage: </b>
+                        <details>{{#with storage}}
+                            <dd>Type: <i>{{type}}</i></dd>
+                            <dd>Size: <i>{{size}}</i></dd>
+                            <hr>
+                            {{/with}}
+                        </details>
+                    </li>
+                    <li><b>Display: </b>
+                        <details>{{#with display}}
+                            <dd>Size: <i>{{size}}</i></dd>
+                            <dd>Resolution: <i>{{resolution}}</i></dd>
+                            <dd>Technology: <i>{{technology}}</i></dd>
+                            <dd>Color space: <i>{{color_space}}</i></dd>
+                            <dd>Brightness: <i>{{brightness}}</i></dd>
+                            <dd>Refresh_rate: <i>{{refresh_rate}}</i></dd>
+                            <hr>
+                            {{/with}}
+                        </details>
+                    </li>
+                    <li><b>Graphics: </b>
+                        <details>{{#with graphics}}
+                            <dd>Brand: <i>{{brand}}</i></dd>
+                            <dd>Model: <i>{{model}}</i></dd>
+                            <dd>Memory: <i>{{memory}}</i></dd>
+                            <hr>
+                            {{/with}}
+                        </details>
+                    </li>
+                    <li><b>Ports: </b>
+                        <details>{{#each ports}}
+                            <dd>Type: <i>{{type}}</i></dd>
+                            <dd>Count: <i>{{count}}</i></dd>
+                            <dd>{{#if features}} Features: {{features}}
+                                {{else}}
+                                {{/if}}
+                            </dd>
+                            <hr>
+                            {{/each}}
+                        </details>
+                    </li>
+                    <li><b>Battery: </b>
+                        <details>{{#with battery}}
+                            <dd>Type: <i>{{type}}</i></dd>
+                            <dd>Capacity: <i>{{capacity}}</i></dd>
+                            <dd>Life: <i>{{life}}</i></dd>
+                            <hr>
+                            {{/with}}
+                        </details>
+                    </li>
+                    <li><b>Weight: </b>{{weight}}</li>
+                    <li><b>Dimensions: </b>
+                        <details>{{#with dimensions}}
+                            <dd>Height: <i>{{height}}</i></dd>
+                            <dd>Width: <i>{{width}}</i></dd>
+                            <dd>Depth: <i>{{depth}}</i></dd>
+                            <hr>
+                            {{/with}}
+                        </details>
+                    </li>
+                    <li><b>Operating system: </b>{{operating_system}}</li>
+                    <li><b>Accessories: </b>
+                        <details>{{#each accessories}}
+                            <dd>Name: <i>{{name}}</i></dd>
+                            <dd>Price: <i>{{price}}</i></dd>
+                            git
+                            <hr>
+                            {{/each}}
+                        </details>
+                    </li>
+                </ul>
+                {{/with}}
+            </div>
         </div>
     </section>
 </div>

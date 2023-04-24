@@ -1,69 +1,67 @@
 <div>
-  <section>
-  {{> title data="Java Script" big=true}}
-  <hr>
-    <div>
-     <ul>
-        <li><b>Language name: </b><i>{{name}}</i></li>
-        <li><b>Description: </b><i>{{description}}</i> </li>
-        <li><b>History: </b><i>{{#with history}}</i>
-            <dd>- Founded in: <i>{{year}}</i></dd>
-            <dd>- Founder: <i>{{founder}}</i></dd>
-          {{/with}} 
-        </li>
-        <hr>
-        <div class="btn-group" role="group">
-            <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-            <b>Types: </b>
-            </button>
-             <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Number</a></li>
-                <li><a class="dropdown-item" href="#">String</a></li>
-                <li><a class="dropdown-item" href="#">Boolean</a></li>
-                <li><a class="dropdown-item" href="#">Null</a></li>
-                <li><a class="dropdown-item" href="#">Undefined</a></li>
-                <li><a class="dropdown-item" href="#">Symbol</a></li>
-                <li><a class="dropdown-item" href="#">Object</a></li>
-             </ul>
-        </div>
-        <li><b>Syntax: </b><details>{{#with syntax}}
-            <dl>
-                <dd><b>Variables: </b>{{#each variables}}
-                   <dd><i>-{{this}}</i></dd> 
-                    {{/each}}
-                </dd>
-                <dd><b>Functions: </b> <br> <i>-{{functions}}</i></dd>
-                <dd><b>Conditionals: </b>{{#each conditionals}}
-                    <dd><i>-{{this}}</i></dd> 
-                {{/each}}</dd>
-                <dd><b> Loops: </b>{{#each loops}}
-                    <dd><i>-{{this}}</i></dd> 
-                {{/each}}
-                </dd>
-                <dd><b>Classes: </b> <br> <i>-{{classes}}</i></dd>
-            </dl>
-            {{/with}}</details>
-        </li>
-        <li><b>Features: </b><details>{{#each features}}
-            <dd><i>-{{this}}</i></dd>
-            {{/each}}</details>
-        </li>
-        <li><b>Libraries: </b><details>{{#each libraries}}
-            <dd><i>-{{this}}</i></dd>
-            {{/each}}</details>
-        </li>
-        <li><b>Tools: </b><details>{{#each tools}}
-            <dd><i>-{{this}}</i></dd>
-            {{/each}}</details>
-        </li>
-        <li><b>Community: </b><details>{{#each community}}
-            <dd>Name: <i>{{name}}</i></dd>
-            <dd>Type: <i>{{type}}</i></dd>
-            <br>
-            {{/each}}</details>
-        </li>
-      </ul>
-    </div>
-  </section>
-  <hr>
+    <section>
+        {{> title data="Java Script" big=true}}
+
+        <div>
+
+            <div class="card p-2">
+                <div class="card-header">
+                    <b>Language name: </b><i>{{name}}</i>
+                    <b>Description: </b><i>{{description}}</i>
+                    <b>History: </b><i>{{#with history}}</i>
+                    <dd>- Founded in: <i>{{year}}</i></dd>
+                    <dd>- Founder: <i>{{founder}}</i></dd>
+                    {{/with}}
+                </div>
+                <div>
+                    <b>Types: </b>
+                    <details>{{#each types}}
+                        <dd><i>-{{this}}</i></dd>
+                        {{/each}}
+                    </details>
+                    <b>Syntax: </b>
+                    <details>{{#with syntax}}
+                        <dl>
+                            <dd><b>Variables: </b>{{#each variables}}
+                            <dd><i>-{{this}}</i></dd>
+                            {{/each}}
+                            </dd>
+                            <dd><b>Functions: </b> <br> <i>-{{functions}}</i></dd>
+                            <dd><b>Conditionals: </b>{{#each conditionals}}
+                            <dd><i>-{{this}}</i></dd>
+                            {{/each}}</dd>
+                            <dd><b> Loops: </b>{{#each loops}}
+                            <dd><i>-{{this}}</i></dd>
+                            {{/each}}
+                            </dd>
+                            <dd><b>Classes: </b> <br> <i>-{{classes}}</i></dd>
+                        </dl>
+                        {{/with}}
+                    </details>
+                    <b>Features: </b>
+                    <details>{{#each features}}
+                        <dd><i>-{{this}}</i></dd>
+                        {{/each}}
+                    </details>
+                    <b>Libraries: </b>
+                    <details>{{#each libraries}}
+                        <dd><i>-{{this}}</i></dd>
+                        {{/each}}
+                    </details>
+                    <b>Tools: </b>
+                    <details>{{#each tools}}
+                        <dd><i>-{{this}}</i></dd>
+                        {{/each}}
+                    </details>
+                    <b>Community: </b>
+                    <details>{{#each community}}
+                        <dd>Name: <i>{{name}}</i></dd>
+                        <dd>Type: <i>{{type}}</i></dd>
+                        <br>
+                        {{/each}}
+                    </details>
+                </div>
+            </div>
+    </section>
+
 </div>

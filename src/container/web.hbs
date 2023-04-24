@@ -1,70 +1,83 @@
-<div>
-  <H1>WEB Languages</H1>
-  {{#with web}}
-    <ol>
-      {{#each languages}}
-        <li>
-          <h3>{{name}}</h3>
-          <dl>
-            <dd><b>Version: </b><i>{{version}}</i></dd>
-            <dd><b>Description: </b><i
-              >{{description}}</i></dd>
-            <dd><b>Version: </b><i>{{version}}</i></dd>
-            <dd>
-              {{#if this.elements}}
-                <b>Elements:</b>{{#each elements}}
-                  <ul>
-                    <li><b>Name: <i>{{name}}</i></b></li>
-                    <li>Description:
-                      <i>{{description}}</i></li>
-                    <li>Attributes:{{#each attributes}}
-                        <dl>
-                          <dd>Name: {{name}}</dd>
-                          <dd>Description:
-                            {{description}}</dd>
-                        </dl>
-                      {{/each}}
-                    </li>
-                  </ul>
-                {{/each}}
-              {{else}}
-                <b>Properties: </b>{{#each properties}}
-                  <ul>
-                    <li><b>Name: <i>{{name}}</i></b></li>
-                    <li>Description:
-                      <i>{{description}}</i></li>
-                    <li>Values:{{#each values}}
-                        <dl><dd>Value: {{value}}</dd>
-                          <dd>Description:
-                            {{description}}</dd>
-                        </dl>
-                      {{/each}}
-                    </li>
-                  </ul>
-                {{/each}}
-              {{/if}}
-              {{#if this.functions}}
-                <b>Functions: </b>{{#each functions}}
-                  <ul>
-                    <li><b>Name: <i>{{name}}</i></b></li>
-                    <li>Type: <i>{{description}}</i></li>
-                    <li>Description:{{#each parameters}}
-                        <dl><dd>Value: {{name}}</dd>
-                          <dd>Description:
-                            {{type}}</dd>
-                          <dd>Description:
-                            {{parameterse}}</dd>
-                        </dl>
-                      {{/each}}
-                    </li>
-                  </ul>
-                {{/each}}
-              {{/if}}
-            </dd>
-          </dl>
-        </li>
-        <hr />
-      {{/each}}
-    </ol>
-  {{/with}}
-</div>
+<main>
+  <div class="p-2">
+    <div class="text-center">
+      <H1>WEB Languages</H1>
+    </div>
+    {{#with web}}
+
+
+
+    {{#each languages}}
+    <div class="card p-2 mb-2">
+      <div class="card-header text-center">
+        <h3>{{name}}</h3>
+      </div>
+      <dl>
+        <dd><b>Version: </b><i>{{version}}</i></dd>
+        <dd><b>Description: </b><i>{{description}}</i></dd>
+        <dd><b>Version: </b><i>{{version}}</i></dd>
+        <dd>
+          {{#if this.elements}}
+          <b>Elements:</b>{{#each elements}}
+          <ul>
+            <li><b>Name: <i>{{name}}</i></b></li>
+            <li>Description:
+              <i>{{description}}</i>
+            </li>
+            <li>Attributes:{{#each attributes}}
+              <dl>
+                <dd>Name: {{name}}</dd>
+                <dd>Description:
+                  {{description}}</dd>
+              </dl>
+              {{/each}}
+            </li>
+          </ul>
+          {{/each}}
+          {{else}}
+          <b>Properties: </b>{{#each properties}}
+          <ul>
+            <li><b>Name: <i>{{name}}</i></b></li>
+            <li>Description:
+              <i>{{description}}</i>
+            </li>
+            <li>Values:{{#each values}}
+              <dl>
+                <dd>Value: {{value}}</dd>
+                <dd>Description:
+                  {{description}}</dd>
+              </dl>
+              {{/each}}
+            </li>
+          </ul>
+          {{/each}}
+          {{/if}}
+          {{#if this.functions}}
+          <b>Functions: </b>{{#each functions}}
+          <ul>
+            <li><b>Name: <i>{{name}}</i></b></li>
+            <li>Type: <i>{{description}}</i></li>
+            <li>Description:{{#each parameters}}
+              <dl>
+                <dd>Value: {{name}}</dd>
+                <dd>Description:
+                  {{type}}</dd>
+                <dd>Description:
+                  {{parameterse}}</dd>
+              </dl>
+              {{/each}}
+            </li>
+          </ul>
+          {{/each}}
+          {{/if}}
+        </dd>
+      </dl>
+
+    </div>
+    {{/each}}
+
+
+
+    {{/with}}
+  </div>
+</main>

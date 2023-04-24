@@ -1,0 +1,149 @@
+<main>
+  <nav class='ms-3'>
+    <ol class='breadcrumb'>
+      {{#each breadcrumb}}
+        {{#unless url}}
+          <li class='breadcrumb-item' aria-current='page'>
+            {{name}}
+          </li>
+        {{/unless}}
+        {{#if url}}
+          <li class='breadcrumb-item'>
+            <a href='{{url}}'>{{name}}</a>
+          </li>
+        {{/if}}
+      {{/each}}
+    </ol>
+  </nav>
+  <section class='p-0 mt-5 mb-5'>
+    {{#with productData}}
+      <div class='row'>
+        <div class='col-6'>
+          <img class='col-12 pb-4' src='{{img}}' />
+          <div class='card'>
+            <div class='card-body'>
+              {{#with info}}
+                <p class='card-title'>{{title}}</p>
+                <p class='card-body'>{{about}}</p>
+                <strong>{{price}}</strong>
+                {{#each category}}
+                  {{#if isHot}}
+                    <span
+                      class='badge text-light text-bg-warning'
+                    >{{name}}</span>
+                  {{/if}}
+                  {{#if isNew}}
+                    <span
+                      class='badge text-bg-primary'
+                    >{{name}}</span>
+                  {{/if}}
+                  {{#if isBonus}}
+                    <span
+                      class='badge text-light text-bg-info'
+                    >{{name}}</span>
+                  {{/if}}
+                {{/each}}
+              {{/with}}
+            </div>
+          </div>
+        </div>
+        <div class='col-5 ms-5 mb-0'>
+          <div class='mb-3'>
+            {{#with item}}
+              <table class='table'>
+                <thead>
+                  {{#each head}}
+                    <th>{{this}}</th>
+                  {{/each}}
+                </thead>
+                <tbody>
+                  {{#each body}}
+                    <tr>
+                      {{#each this}}
+                        {{#if @first}}
+                          <th>{{this}}</th>
+                        {{else}}
+                          <td>{{this}}</td>
+                        {{/if}}
+                      {{/each}}
+                    </tr>
+                  {{/each}}
+                </tbody>
+              </table>
+            {{/with}}
+          </div>
+          <div class='mb-3'>
+            {{#with param}}
+              <div class='card list-group'>
+                <div class='card-header'>
+                  {{title}}
+                </div>
+                {{#each list}}
+                  <div class='list-group-item'>
+                    {{this}}
+                  </div>
+                {{/each}}
+              </div>
+            {{/with}}
+          </div>
+          <div class='alert alert-danger'>
+            {{#with alert}}
+              {{#if isError}}
+                <strong>Danger!</strong>
+                This is a danger alert — check it out!
+              {{else}}
+                {{text}}
+              {{/if}}
+            {{/with}}
+          </div>
+        </div>
+      </div>
+      <div class='card'>
+        <div class='card-body'>
+          {{#each actionList}}
+            {{#if isWarning}}
+              <a
+                href='#'
+                class='btn btn-warning'
+              >{{name}}</a>
+            {{/if}}
+            {{#if isError}}
+              <a
+                href='#'
+                class='btn btn-outline-danger'
+              >{{name}}</a>
+            {{/if}}
+            {{#if isSuccess}}
+              <a
+                href='#'
+                class='btn btn-success'
+              >{{name}}</a>
+            {{/if}}
+            {{#if isGood}}
+              <a
+                href='#'
+                class='btn btn-outline-success'
+              >{{name}}</a>
+            {{/if}}
+          {{/each}}
+        </div>
+      </div>
+    {{/with}}
+  </section>
+  <hr />
+  <section class='p-0 mt-5 mb-5'>
+    {{#with goodsOtherBlock}}
+      <h2 class='text-center'>{{title}}</h2>
+      <div class='row'>
+        {{#each cards}}
+          {{> shopcard}}
+        {{/each}}
+      </div>
+    {{/with}}
+  </section>
+  <hr />
+  <section class='p-0 mt-5 mb-5'>
+    {{> shopaction}}
+  </section>
+  <hr />
+</main>
